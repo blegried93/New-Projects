@@ -1,0 +1,1 @@
+This project uses XGBoost to determine whether TupleScore, derived from the Domingo et al. 2020 dataset, can be predictive of the fitness measurement described in that paper.  Unlike with the California Housing Price dataset, it is not clear whether specific choice of nucleotide bases in particular columns is predictive.
