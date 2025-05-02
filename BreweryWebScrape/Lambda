@@ -1,0 +1,131 @@
+import json
+import requests
+import hashlib
+import boto3
+from botocore.exceptions import ClientError
+
+# SNS client
+sns_client = boto3.client('sns', region_name='us-east-2')  # Use your AWS region
+
+# S3 client
+s3_client = boto3.client('s3')
+
+# The ARN of your SNS topic
+SNS_TOPIC_ARN = 'arn:aws:sns:us-east-2:149536500138:JSONChangeNotifications'
+
+# S3 bucket where the previous hash is stored
+S3_BUCKET_NAME = 'web-monitor-brandon'  # Your S3 bucket name
+S3_KEY = 'previous_menu_hash.txt'  # S3 key where the hash will be stored
+
+# URL of the menu page
+url = 'https://gravitystormbrewery.com/get-beer'
+
+# The headers used to access the page
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36'
+}
+
+# Function to get the current beer menu
+def get_current_menu():
+    # Perform a POST request as required by the server
+    response = requests.post(url, headers=headers)
+    
+    # Log the response status for debugging
+    print(f"Response Status Code: {response.status_code}")
+    
+    if response.status_code == 200:
+        try:
+            return response.json()  # Try to parse the JSON content
+        except ValueError as e:
+            raise Exception(f"Error parsing JSON: {str(e)}")  # Handle JSON parsing errors
+    else:
+        raise Exception(f"Failed to fetch menu data: {response.status_code}")
+
+# Function to calculate a hash of the menu to detect changes
+def get_menu_hash(menu_data):
+    menu_str = json.dumps(menu_data, sort_keys=True)
+    return hashlib.sha256(menu_str.encode('utf-8')).hexdigest()
+
+# Function to get the previous menu hash from S3
+def get_previous_menu_hash():
+    try:
+        response = s3_client.get_object(Bucket=S3_BUCKET_NAME, Key=S3_KEY)
+        return response['Body'].read().decode('utf-8')
+    except ClientError:
+        # If the object does not exist, we return None
+        return None
+
+# Function to store the current menu hash in S3
+def store_current_menu_hash(menu_hash):
+    s3_client.put_object(
+        Bucket=S3_BUCKET_NAME,
+        Key=S3_KEY,
+        Body=menu_hash
+    )
+
+# Function to generate a summary of the beer menu
+def generate_menu_summary(menu_data):
+    summary = "The new beer menu includes:\n\n"
+    for beer in menu_data:
+        summary += f"{beer['name']} - {beer['type']} - {beer['abv']}\n"
+        if beer['description']:
+            summary += f"  Description: {beer['description']}\n"
+    return summary
+
+# Lambda handler function
+def lambda_handler(event, context):
+    try:
+        # Get the current beer menu
+        current_menu = get_current_menu()
+
+        # Load the previous menu hash from S3
+        previous_menu_hash = get_previous_menu_hash()
+
+        # Compute the hash of the current menu
+        current_menu_hash = get_menu_hash(current_menu)
+
+        # Compare with the previous menu hash
+        if previous_menu_hash != current_menu_hash:
+            # The menu has changed
+            message = {
+                "message": "Beer menu changed!",
+                "new_items": current_menu
+            }
+
+            # Generate a summary of the menu
+            menu_summary = generate_menu_summary(current_menu)
+
+            # Include the summary in the message
+            message["menu_summary"] = menu_summary
+
+            # Publish to SNS
+            sns_response = sns_client.publish(
+                TopicArn=SNS_TOPIC_ARN,
+                Message=json.dumps(message),
+                Subject="Beer Menu Changed!"
+            )
+
+            # Store the current menu hash in S3
+            store_current_menu_hash(current_menu_hash)
+
+            return {
+                'statusCode': 200,
+                'body': json.dumps({
+                    'message': 'Notification sent!',
+                    'sns_response': sns_response
+                })
+            }
+        else:
+            return {
+                'statusCode': 200,
+                'body': json.dumps({
+                    'message': 'No change detected in the menu.'
+                })
+            }
+    except Exception as e:
+        return {
+            'statusCode': 500,
+            'body': json.dumps({
+                'message': f"Error: {str(e)}"
+            })
+        }
