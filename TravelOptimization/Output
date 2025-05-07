@@ -1,0 +1,198 @@
+Input:
+
+
+Output:
+
+Fetching 1/100: Empire State Building, NYC → Times Square, NYC
+Fetching 2/100: Googleplex, Mountain View, CA → Apple Park, Cupertino, CA
+Fetching 3/100: Union Square, San Francisco, CA → Ferry Building, SF
+Fetching 4/100: Columbus Circle, NYC → Flatiron Building, NYC
+Fetching 5/100: Hollywood Sign, LA → Santa Monica Pier, LA
+Fetching 6/100: Fenway Park, Boston → MIT, Cambridge
+Fetching 7/100: Wrigley Field, Chicago → Millennium Park, Chicago
+Fetching 8/100: AT&T Stadium, Dallas → Dallas Zoo
+Fetching 9/100: Space Needle, Seattle → University of Washington
+Fetching 10/100: Houston Zoo → Minute Maid Park, Houston
+Fetching 11/100: Empire State Building, NYC → Times Square, NYC
+Fetching 12/100: Googleplex, Mountain View, CA → Apple Park, Cupertino, CA
+Fetching 13/100: Union Square, San Francisco, CA → Ferry Building, SF
+Fetching 14/100: Columbus Circle, NYC → Flatiron Building, NYC
+Fetching 15/100: Hollywood Sign, LA → Santa Monica Pier, LA
+Fetching 16/100: Fenway Park, Boston → MIT, Cambridge
+Fetching 17/100: Wrigley Field, Chicago → Millennium Park, Chicago
+Fetching 18/100: AT&T Stadium, Dallas → Dallas Zoo
+Fetching 19/100: Space Needle, Seattle → University of Washington
+Fetching 20/100: Houston Zoo → Minute Maid Park, Houston
+Fetching 21/100: Empire State Building, NYC → Times Square, NYC
+Fetching 22/100: Googleplex, Mountain View, CA → Apple Park, Cupertino, CA
+Fetching 23/100: Union Square, San Francisco, CA → Ferry Building, SF
+Fetching 24/100: Columbus Circle, NYC → Flatiron Building, NYC
+Fetching 25/100: Hollywood Sign, LA → Santa Monica Pier, LA
+Fetching 26/100: Fenway Park, Boston → MIT, Cambridge
+Fetching 27/100: Wrigley Field, Chicago → Millennium Park, Chicago
+Fetching 28/100: AT&T Stadium, Dallas → Dallas Zoo
+Fetching 29/100: Space Needle, Seattle → University of Washington
+Fetching 30/100: Houston Zoo → Minute Maid Park, Houston
+Fetching 31/100: Empire State Building, NYC → Times Square, NYC
+Fetching 32/100: Googleplex, Mountain View, CA → Apple Park, Cupertino, CA
+Fetching 33/100: Union Square, San Francisco, CA → Ferry Building, SF
+Fetching 34/100: Columbus Circle, NYC → Flatiron Building, NYC
+Fetching 35/100: Hollywood Sign, LA → Santa Monica Pier, LA
+Fetching 36/100: Fenway Park, Boston → MIT, Cambridge
+Fetching 37/100: Wrigley Field, Chicago → Millennium Park, Chicago
+Fetching 38/100: AT&T Stadium, Dallas → Dallas Zoo
+Fetching 39/100: Space Needle, Seattle → University of Washington
+Fetching 40/100: Houston Zoo → Minute Maid Park, Houston
+Fetching 41/100: Empire State Building, NYC → Times Square, NYC
+Fetching 42/100: Googleplex, Mountain View, CA → Apple Park, Cupertino, CA
+Fetching 43/100: Union Square, San Francisco, CA → Ferry Building, SF
+Fetching 44/100: Columbus Circle, NYC → Flatiron Building, NYC
+Fetching 45/100: Hollywood Sign, LA → Santa Monica Pier, LA
+Fetching 46/100: Fenway Park, Boston → MIT, Cambridge
+Fetching 47/100: Wrigley Field, Chicago → Millennium Park, Chicago
+Fetching 48/100: AT&T Stadium, Dallas → Dallas Zoo
+Fetching 49/100: Space Needle, Seattle → University of Washington
+Fetching 50/100: Houston Zoo → Minute Maid Park, Houston
+Fetching 51/100: Empire State Building, NYC → Times Square, NYC
+Fetching 52/100: Googleplex, Mountain View, CA → Apple Park, Cupertino, CA
+Fetching 53/100: Union Square, San Francisco, CA → Ferry Building, SF
+Fetching 54/100: Columbus Circle, NYC → Flatiron Building, NYC
+Fetching 55/100: Hollywood Sign, LA → Santa Monica Pier, LA
+Fetching 56/100: Fenway Park, Boston → MIT, Cambridge
+Fetching 57/100: Wrigley Field, Chicago → Millennium Park, Chicago
+Fetching 58/100: AT&T Stadium, Dallas → Dallas Zoo
+Fetching 59/100: Space Needle, Seattle → University of Washington
+Fetching 60/100: Houston Zoo → Minute Maid Park, Houston
+Fetching 61/100: Empire State Building, NYC → Times Square, NYC
+Fetching 62/100: Googleplex, Mountain View, CA → Apple Park, Cupertino, CA
+Fetching 63/100: Union Square, San Francisco, CA → Ferry Building, SF
+Fetching 64/100: Columbus Circle, NYC → Flatiron Building, NYC
+Fetching 65/100: Hollywood Sign, LA → Santa Monica Pier, LA
+Fetching 66/100: Fenway Park, Boston → MIT, Cambridge
+Fetching 67/100: Wrigley Field, Chicago → Millennium Park, Chicago
+Fetching 68/100: AT&T Stadium, Dallas → Dallas Zoo
+Fetching 69/100: Space Needle, Seattle → University of Washington
+Fetching 70/100: Houston Zoo → Minute Maid Park, Houston
+Fetching 71/100: Empire State Building, NYC → Times Square, NYC
+Fetching 72/100: Googleplex, Mountain View, CA → Apple Park, Cupertino, CA
+Fetching 73/100: Union Square, San Francisco, CA → Ferry Building, SF
+Fetching 74/100: Columbus Circle, NYC → Flatiron Building, NYC
+Fetching 75/100: Hollywood Sign, LA → Santa Monica Pier, LA
+Fetching 76/100: Fenway Park, Boston → MIT, Cambridge
+Fetching 77/100: Wrigley Field, Chicago → Millennium Park, Chicago
+Fetching 78/100: AT&T Stadium, Dallas → Dallas Zoo
+Fetching 79/100: Space Needle, Seattle → University of Washington
+Fetching 80/100: Houston Zoo → Minute Maid Park, Houston
+Fetching 81/100: Empire State Building, NYC → Times Square, NYC
+Fetching 82/100: Googleplex, Mountain View, CA → Apple Park, Cupertino, CA
+Fetching 83/100: Union Square, San Francisco, CA → Ferry Building, SF
+Fetching 84/100: Columbus Circle, NYC → Flatiron Building, NYC
+Fetching 85/100: Hollywood Sign, LA → Santa Monica Pier, LA
+Fetching 86/100: Fenway Park, Boston → MIT, Cambridge
+Fetching 87/100: Wrigley Field, Chicago → Millennium Park, Chicago
+Fetching 88/100: AT&T Stadium, Dallas → Dallas Zoo
+Fetching 89/100: Space Needle, Seattle → University of Washington
+Fetching 90/100: Houston Zoo → Minute Maid Park, Houston
+Fetching 91/100: Empire State Building, NYC → Times Square, NYC
+Fetching 92/100: Googleplex, Mountain View, CA → Apple Park, Cupertino, CA
+Fetching 93/100: Union Square, San Francisco, CA → Ferry Building, SF
+Fetching 94/100: Columbus Circle, NYC → Flatiron Building, NYC
+Fetching 95/100: Hollywood Sign, LA → Santa Monica Pier, LA
+Fetching 96/100: Fenway Park, Boston → MIT, Cambridge
+Fetching 97/100: Wrigley Field, Chicago → Millennium Park, Chicago
+Fetching 98/100: AT&T Stadium, Dallas → Dallas Zoo
+Fetching 99/100: Space Needle, Seattle → University of Washington
+Fetching 100/100: Houston Zoo → Minute Maid Park, Houston
+
+Total routes collected: 246
+   route_id                         origin                destination  \
+0         0     Empire State Building, NYC          Times Square, NYC   
+1         1     Empire State Building, NYC          Times Square, NYC   
+2         2     Empire State Building, NYC          Times Square, NYC   
+3         0  Googleplex, Mountain View, CA  Apple Park, Cupertino, CA   
+4         1  Googleplex, Mountain View, CA  Apple Park, Cupertino, CA   
+
+   distance_km  duration_min  steps_count  is_best  
+0        1.709     16.816667            3        0  
+1        1.707     16.583333            5        1  
+2        1.704     18.450000            4        0  
+3       18.044     19.100000           13        1  
+4       17.487     21.016667           14        0  
+Epoch 1/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 2s 33ms/step - accuracy: 0.4206 - loss: 0.7197 - val_accuracy: 0.3500 - val_loss: 0.7296
+Epoch 2/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 11ms/step - accuracy: 0.4887 - loss: 0.6652 - val_accuracy: 0.4250 - val_loss: 0.7149
+Epoch 3/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 10ms/step - accuracy: 0.4721 - loss: 0.6893 - val_accuracy: 0.4750 - val_loss: 0.6978
+Epoch 4/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 13ms/step - accuracy: 0.5815 - loss: 0.6651 - val_accuracy: 0.5250 - val_loss: 0.6887
+Epoch 5/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 10ms/step - accuracy: 0.5474 - loss: 0.6582 - val_accuracy: 0.6250 - val_loss: 0.6804
+Epoch 6/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 11ms/step - accuracy: 0.6049 - loss: 0.6561 - val_accuracy: 0.6500 - val_loss: 0.6728
+Epoch 7/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 14ms/step - accuracy: 0.5771 - loss: 0.6542 - val_accuracy: 0.6500 - val_loss: 0.6703
+Epoch 8/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 11ms/step - accuracy: 0.5878 - loss: 0.6617 - val_accuracy: 0.6500 - val_loss: 0.6675
+Epoch 9/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 10ms/step - accuracy: 0.5911 - loss: 0.6379 - val_accuracy: 0.6500 - val_loss: 0.6645
+Epoch 10/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step - accuracy: 0.6935 - loss: 0.6303 - val_accuracy: 0.6500 - val_loss: 0.6612
+Epoch 11/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 10ms/step - accuracy: 0.6207 - loss: 0.6404 - val_accuracy: 0.6500 - val_loss: 0.6598
+Epoch 12/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 11ms/step - accuracy: 0.5851 - loss: 0.6471 - val_accuracy: 0.6500 - val_loss: 0.6580
+Epoch 13/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 11ms/step - accuracy: 0.5861 - loss: 0.6539 - val_accuracy: 0.6500 - val_loss: 0.6569
+Epoch 14/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 11ms/step - accuracy: 0.5347 - loss: 0.6640 - val_accuracy: 0.6500 - val_loss: 0.6551
+Epoch 15/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step - accuracy: 0.5855 - loss: 0.6491 - val_accuracy: 0.6500 - val_loss: 0.6541
+Epoch 16/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 11ms/step - accuracy: 0.6138 - loss: 0.6299 - val_accuracy: 0.6500 - val_loss: 0.6528
+Epoch 17/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 11ms/step - accuracy: 0.6385 - loss: 0.5962 - val_accuracy: 0.6500 - val_loss: 0.6521
+Epoch 18/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 10ms/step - accuracy: 0.6150 - loss: 0.6227 - val_accuracy: 0.6750 - val_loss: 0.6510
+Epoch 19/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 11ms/step - accuracy: 0.6488 - loss: 0.6263 - val_accuracy: 0.6750 - val_loss: 0.6508
+Epoch 20/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 10ms/step - accuracy: 0.6306 - loss: 0.6268 - val_accuracy: 0.6750 - val_loss: 0.6509
+Epoch 21/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 11ms/step - accuracy: 0.6144 - loss: 0.6505 - val_accuracy: 0.6750 - val_loss: 0.6496
+Epoch 22/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 10ms/step - accuracy: 0.5325 - loss: 0.6688 - val_accuracy: 0.6750 - val_loss: 0.6507
+Epoch 23/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 11ms/step - accuracy: 0.6864 - loss: 0.5969 - val_accuracy: 0.6750 - val_loss: 0.6485
+Epoch 24/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 11ms/step - accuracy: 0.6072 - loss: 0.6247 - val_accuracy: 0.6750 - val_loss: 0.6486
+Epoch 25/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step - accuracy: 0.6608 - loss: 0.6133 - val_accuracy: 0.6750 - val_loss: 0.6471
+Epoch 26/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 11ms/step - accuracy: 0.5951 - loss: 0.6326 - val_accuracy: 0.6750 - val_loss: 0.6472
+Epoch 27/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 11ms/step - accuracy: 0.6454 - loss: 0.6347 - val_accuracy: 0.6750 - val_loss: 0.6449
+Epoch 28/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 11ms/step - accuracy: 0.6556 - loss: 0.6280 - val_accuracy: 0.6750 - val_loss: 0.6445
+Epoch 29/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 11ms/step - accuracy: 0.6151 - loss: 0.6289 - val_accuracy: 0.6750 - val_loss: 0.6445
+Epoch 30/30
+10/10 ━━━━━━━━━━━━━━━━━━━━ 0s 14ms/step - accuracy: 0.6336 - loss: 0.6187 - val_accuracy: 0.6750 - val_loss: 0.6436
+
+✅ Test Set Accuracy: 0.60
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 87ms/step
+
+/usr/local/lib/python3.11/dist-packages/sklearn/utils/validation.py:2732: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+
+
+🧭 Predicted route probabilities:
+   route_id             origin       destination  distance_km  duration_min  \
+2         2  Central Park, NYC  Wall Street, NYC       11.208     34.583333   
+1         1  Central Park, NYC  Wall Street, NYC       11.617     31.200000   
+0         0  Central Park, NYC  Wall Street, NYC       13.621     28.833333   
+
+   steps_count  is_best  predicted_prob_best  
+2           17        0             0.695606  
+1           11        0             0.568109  
+0           10        1             0.516332  
