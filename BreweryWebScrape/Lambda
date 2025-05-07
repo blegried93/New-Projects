@@ -11,7 +11,7 @@ sns_client = boto3.client('sns', region_name='us-east-2')  # Use your AWS region
 s3_client = boto3.client('s3')
 
 # The ARN of your SNS topic
-SNS_TOPIC_ARN = 'arn:aws:sns:us-east-2:149536500138:JSONChangeNotifications'
+SNS_TOPIC_ARN = '...'
 
 # S3 bucket where the previous hash is stored
 S3_BUCKET_NAME = 'web-monitor-brandon'  # Your S3 bucket name
