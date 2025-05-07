@@ -1,5 +1,5 @@
 Input:
-
+The inputs are 10 address pairs, where each pair has 10 copies in the data set.  Routes are then obtained from the Google Maps API.
 
 Output:
 
