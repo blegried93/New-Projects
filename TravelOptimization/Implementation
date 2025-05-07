@@ -1,0 +1,134 @@
+import googlemaps
+import pandas as pd
+import numpy as np
+import time
+import tensorflow as tf
+from tensorflow import keras
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+
+# ---------------------
+# CONFIG
+mykey = '...'
+gmaps = googlemaps.Client(key=mykey)
+
+# List of origin-destination pairs (expand this list)
+address_pairs = [
+    ("Empire State Building, NYC", "Times Square, NYC"),
+    ("Googleplex, Mountain View, CA", "Apple Park, Cupertino, CA"),
+    ("Union Square, San Francisco, CA", "Ferry Building, SF"),
+    ("Columbus Circle, NYC", "Flatiron Building, NYC"),
+    ("Hollywood Sign, LA", "Santa Monica Pier, LA"),
+    ("Fenway Park, Boston", "MIT, Cambridge"),
+    ("Wrigley Field, Chicago", "Millennium Park, Chicago"),
+    ("AT&T Stadium, Dallas", "Dallas Zoo"),
+    ("Space Needle, Seattle", "University of Washington"),
+    ("Houston Zoo", "Minute Maid Park, Houston")
+]
+
+# You can multiply the pairs to make the dataset larger:
+address_pairs = address_pairs * 10  # 10 × 10 = 100 samples
+
+# ---------------------
+# Step 1: Get Routes
+def get_routes(origin, destination):
+    try:
+        routes = gmaps.directions(
+            origin,
+            destination,
+            mode="driving",
+            departure_time="now",
+            alternatives=True
+        )
+        results = []
+        for i, route in enumerate(routes):
+            leg = route['legs'][0]
+            result = {
+                'route_id': i,
+                'origin': origin,
+                'destination': destination,
+                'distance_km': leg['distance']['value'] / 1000,
+                'duration_min': leg.get('duration_in_traffic', leg['duration'])['value'] / 60,
+                'steps_count': len(leg['steps'])
+            }
+            results.append(result)
+        return results
+    except Exception as e:
+        print(f"Error for {origin} to {destination}: {e}")
+        return []
+
+# ---------------------
+# Step 2: Label best route
+def label_best(routes):
+    if not routes:
+        return []
+    min_duration = min(r['duration_min'] for r in routes)
+    for r in routes:
+        r['is_best'] = int(r['duration_min'] == min_duration)
+    return routes
+
+# ---------------------
+# Step 3: Collect data
+all_routes = []
+for i, (origin, dest) in enumerate(address_pairs):
+    print(f"Fetching {i+1}/{len(address_pairs)}: {origin} → {dest}")
+    raw_routes = get_routes(origin, dest)
+    labeled = label_best(raw_routes)
+    all_routes.extend(labeled)
+    time.sleep(1)  # To avoid hitting rate limits
+
+df = pd.DataFrame(all_routes)
+print(f"\nTotal routes collected: {len(df)}")
+print(df.head())
+
+# ---------------------
+# Step 4: Prepare data
+X = df[['distance_km', 'duration_min', 'steps_count']].values
+y = df['is_best'].values
+
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X_scaled, y, test_size=0.2, random_state=42
+)
+
+# ---------------------
+# Step 5: Build and train model
+model = keras.Sequential([
+    keras.layers.Input(shape=(3,)),
+    keras.layers.Dense(16, activation='relu'),
+    keras.layers.Dense(8, activation='relu'),
+    keras.layers.Dense(1, activation='sigmoid')  # For binary classification
+])
+
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+history = model.fit(
+    X_train, y_train,
+    validation_split=0.2,
+    epochs=30,
+    batch_size=16,
+    verbose=1
+)
+
+# ---------------------
+# Step 6: Evaluate
+loss, acc = model.evaluate(X_test, y_test, verbose=0)
+print(f"\n✅ Test Set Accuracy: {acc:.2f}")
+
+# ---------------------
+# Step 7: Predict for a new delivery
+new_origin = "Central Park, NYC"
+new_dest = "Wall Street, NYC"
+new_routes = label_best(get_routes(new_origin, new_dest))
+
+if new_routes:
+    new_df = pd.DataFrame(new_routes)
+    X_new = scaler.transform(new_df[['distance_km', 'duration_min', 'steps_count']])
+    preds = model.predict(X_new)
+    new_df['predicted_prob_best'] = preds
+    print("\n🧭 Predicted route probabilities:")
+    print(new_df.sort_values('predicted_prob_best', ascending=False))
+else:
+    print("No new route data retrieved.")
