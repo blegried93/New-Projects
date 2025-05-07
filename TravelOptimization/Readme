@@ -1,1 +1,3 @@
-Summary here
+The inputs are 10 address pairs, where each pair has 10 copies in the data set.  Routes are then obtained from the Google Maps API.  Each pair of locations gets multiple routes—likely 3 variations—based on slight differences in time, path, or traffic.  In this iteration, I collected 246 total route samples, which is consistent with ~2–3 samples per origin-destination pair per fetch (100 fetches).
+
+The script then trained a binary classifier (a neural net) to predict the best route (is_best) from features like: distance_km, duration_min, steps_count. Training and validation accuracy steadily increased.  We started around 42% and reached about 68.6 percent by epoch 23. The validation accuracy plateaued around 67.5 percent, indicating reasonable generalization.
