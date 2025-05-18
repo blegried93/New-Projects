@@ -1,7 +1,7 @@
 This is a cloud computing project seeking to follow a posted beer menu on the Gravity Storm Brewing Cooperative website.  The entire system is serverless, scalable, and automated.  The functionalities used are described here.  I would like to scale this process to process many websites to produce interesting updates to email subscribers.
 
 Process Overview:
-1. Triggering Lambda: Lambda can be triggered on-demand or at regular intervals (e.g., via a CloudWatch Event or an API call). In our case, we set it up to run on demand.
+1. Triggering Lambda: Lambda can be triggered on-demand or at regular intervals (e.g., via a CloudWatch Event or an API call). In this case, it is set up to run on demand.
 2. Web Scraping: The Lambda function fetches the current beer menu from the website via an HTTP request and parses the returned JSON data.
 3. Change Detection: It compares the fetched data with the previously stored version to check for any changes.
 4. Notification via SNS: If a change is detected, the Lambda function publishes a message to the SNS topic.
