@@ -7,12 +7,10 @@ from tensorflow import keras
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-# ---------------------
-# CONFIG
 mykey = '...'
 gmaps = googlemaps.Client(key=mykey)
 
-# List of origin-destination pairs (expand this list)
+# List of origin-destination pairs (can expand this list)
 address_pairs = [
     ("Empire State Building, NYC", "Times Square, NYC"),
     ("Googleplex, Mountain View, CA", "Apple Park, Cupertino, CA"),
