@@ -7,9 +7,9 @@ Process Overview:
 4. Notification via SNS: If a change is detected, the Lambda function publishes a message to the SNS topic.
 5. Email Subscription: SNS sends the message to all subscribed email addresses.
 
-AWS Lambda is a serverless computing service that lets you run code in response to events without provisioning or managing servers. It automatically scales based on the number of requests. I used Lambda to create a lambda function that performs the web scraping task of fetching the beer menu and detecting changes. This Lambda function is also responsible for triggering SNS notifications when the beer menu changes.
+AWS Lambda is a serverless computing service that lets you run code in response to events without a server. It automatically scales based on the number of requests. I used Lambda to create a lambda function that performs the web scraping task of fetching the beer menu and detecting changes. This Lambda function is also responsible for triggering SNS notifications.
 
-AWS SNS (Simple Notification Service) is a fully managed messaging service that allows you to send notifications to subscribers via various channels (e.g., email, SMS, etc.). It can handle high-throughput and a large number of subscribers. I created an SNS Topic that will publish messages (in our case, the beer menu or a notification about a change in the menu).  I set up an email subscription to this SNS topic that is handled through Lambda.
+AWS SNS (Simple Notification Service) is a fully managed messaging service that allows you to send notifications to subscribers via various channels (e.g., email, SMS, etc.). It can handle a large number of requests and subscribers. I created an SNS Topic that will send messages (in our case, the beer menu or a notification about a change in the menu).  I set up an email subscription to this SNS topic that is handled through Lambda.
 
 AWS IAM (Identity and Access Management) is used to securely control access to AWS services and resources. You create and manage AWS users, groups, and permissions. I created IAM Roles and attached policies to allow the lambda function to publish messages to the SNS topic. These permissions were necessary for the Lambda function to interact with SNS. I configured the necessary permissions for SNS so that only the right entities (such as Lambda) could publish to the topic.
 
