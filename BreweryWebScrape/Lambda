@@ -10,7 +10,7 @@ sns_client = boto3.client('sns', region_name='us-east-2')  # Use your AWS region
 # S3 client
 s3_client = boto3.client('s3')
 
-# The ARN of the SNS topic
+# The ARN of the SNS topic, removed from the in-line code here, should be replaced
 SNS_TOPIC_ARN = '...'
 
 # S3 bucket where the previous hash is stored
